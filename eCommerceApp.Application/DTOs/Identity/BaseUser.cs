@@ -1,0 +1,8 @@
+﻿namespace eCommerceApp.Application.DTOs.Identity
+{
+    public class BaseUser
+    {
+        public required string Email { get; set; }
+        public required string Password { get; set; }
+    }
+}
