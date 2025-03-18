@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace eCommerceApp.Application.DTOs.Cart
 {
-    public class GetPaymentMethod
+    public class Checkout
     {
-        public required Guid Id { get; set; }
-        public required string Name { get; set; }
+        public required Guid PaymentMethodId { get; set; }
+        public required IEnumerable<ProcessCart> Carts { get; set; }
     }
 }
