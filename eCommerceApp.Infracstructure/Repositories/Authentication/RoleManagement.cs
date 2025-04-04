@@ -12,9 +12,7 @@ namespace eCommerceApp.Infracstructure.Repositories.Authentication
         public async Task<string> GetUserRole(string userEmail)
         {
             var user = await userManager.FindByEmailAsync(userEmail);
-#pragma warning disable CS8603 // Possible null reference return.
             return (await userManager.GetRolesAsync(user!)).FirstOrDefault();
-#pragma warning restore CS8603 // Possible null reference return.
         }
     }
 }

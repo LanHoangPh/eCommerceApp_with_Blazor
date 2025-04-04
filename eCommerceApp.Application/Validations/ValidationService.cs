@@ -12,9 +12,9 @@ namespace eCommerceApp.Application.Validations
             {
                 var errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
                 string errorToString = string.Join(", ", errors);
-                return new ServicesResponse { Message = errorToString }; //There is no argument given that corresponds to the required parameter 'success' of 'ServicesResponse.ServicesResponse(bool, string)'
+                return new ServicesResponse { Message = errorToString }; 
             }
-            return new ServicesResponse{ Success = true};// There is no argument given that corresponds to the required parameter 'success' of 'ServicesResponse.ServicesResponse(bool, string)'
+            return new ServicesResponse{ Success = true};
         }
     }
 }
